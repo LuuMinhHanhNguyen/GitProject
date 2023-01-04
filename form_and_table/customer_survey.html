@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Survey</title>
+    <link href="customer_survey-css.css" rel="stylesheet">
+</head>
+<body>
+<form>
+<h2>Market Research Survey</h2>
+<p>Please take a few moments to complete this satisfaction survey.</p>
+<hr style="border-top: 1px dotted grey;">
+<p>What is your age range?</p>
+<select value="age">
+  <option>18–24</option>
+  <option>25–33</option>
+  <option>34–46</option>
+</select>
+<p>What is your yearly income range?</p>
+<select value="salary">
+  <option>$50000–$60000</option>
+  <option>$60000–$80000</option>
+  <option>$80000–$100000</option>
+</select>
+<p>Gender Identity</p>
+    <input type="radio" name="radio1">Male<br>
+    <input type="radio" name="radio1">Female<br>
+    <input type="radio" name="radio1">Nonbinary<br>
+    <input type="radio" name="radio1">Other<br>
+    <input type="text" style="margin-left: 23px; margin-top: 10px">
+<p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+<input type="checkbox">Product 1<br>
+<input type="checkbox">Product 2<br>
+<input type="checkbox">Product 3<br>
+<p>How often would you use our new product?</p>
+<input type="radio" name="radio2">Daily<br>
+<input type="radio" name="radio2">Weekly<br>
+<input type="radio" name="radio2">Monthly<br>
+<p>What would you pay for the new product?</p>
+<span>$</span>
+<input type="text" width="50px">
+<span>.</span>
+<input id="a" type="text" style="width: 20px"><br>
+<span id="cheat" style="margin-left: 14px; width: 187px">Dollars</span>
+<span>Cents</span><br>
+<p>What features would you like to see in the new product.</p>
+<textarea cols="60" rows="5"></textarea>
+<p style="font-size: 14px">Please rate your level of agreement</p>
+<table>
+    <tr>
+        <td></td>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+    </tr>
+    <tr>
+        <td>Our products are priced fairly.</td>
+        <th><input type="radio" name="radio3"><figcaption>1</figcaption></th>
+        <th><input type="radio" name="radio3"><figcaption>2</figcaption></th>
+        <th><input type="radio" name="radio3"><figcaption>3</figcaption></th>
+        <th><input type="radio" name="radio3"><figcaption>4</figcaption></th>
+    </tr>
+    <tr>
+        <td>Our products are high quality.</td>
+        <th><input type="radio" name="radio4"><figcaption>1</figcaption></th>
+        <th><input type="radio" name="radio4"><figcaption>2</figcaption></th>
+        <th><input type="radio" name="radio4"><figcaption>3</figcaption></th>
+        <th><input type="radio" name="radio4"><figcaption>4</figcaption></th>
+    </tr>
+    <tr>
+        <td style="width: 300px">You would recommend our product to a friend or coworker.</td>
+        <th><input type="radio" name="radio5"><figcaption>1</figcaption></th>
+        <th><input type="radio" name="radio5"><figcaption>2</figcaption></th>
+        <th><input type="radio" name="radio5"><figcaption>3</figcaption></th>
+        <th><input type="radio" name="radio5"><figcaption>4</figcaption></th>
+    </tr>
+
+</table>
+<br>
+<input type="submit">
+</form>
+</body>
+</html>

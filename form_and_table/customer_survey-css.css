@@ -1,0 +1,31 @@
+*{
+    font-family: "Lucida Grande";
+}
+select{
+    width: 200px;
+    background-color: lightgray;
+}
+#cheat{
+    display: inline-block;
+}
+table, th, td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+figcaption{
+    font-weight: normal;
+}
+p{
+    font-weight: bold;
+}
+td{
+    font-weight: bold;
+}
+th{
+    font-size: 14px;
+    width: 150px;
+}
+tr:nth-child(odd){
+    background-color: lightgray;
+}

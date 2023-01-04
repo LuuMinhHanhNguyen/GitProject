@@ -1,0 +1,33 @@
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+}
+.oddRow th:nth-child(even){
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+.oddRow th:nth-child(odd){
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+.evenRow th:nth-child(odd){
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+.evenRow th:nth-child(even){
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+td{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}

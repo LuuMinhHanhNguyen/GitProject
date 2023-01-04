@@ -1,0 +1,52 @@
+*{
+    margin-bottom: 8px;
+}
+input{
+    margin: 5px;
+}
+label{
+    width: 100px;
+    text-align: end;
+    display: inline-block;
+    color: blue;
+}
+span{
+    float: left;
+    text-align: end;
+    display: inline-block;
+    width: 100px;
+    color: blue;
+}
+
+table{
+    display: inline;
+}
+td{
+    width: 150px;
+    color: orange;
+}
+
+.label2{
+    width: 150px;
+    text-align: start;
+    color: blue;
+}
+.div1{
+    background-color: lightblue;
+    padding: 20px;
+    width: 620px;
+
+}
+.form1{
+    background-color: white;
+
+}
+.form2{
+    background-color: lightgoldenrodyellow;
+    width: 620px;
+}
+
+
+
+
+
