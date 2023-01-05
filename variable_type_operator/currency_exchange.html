@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Exchange</title>
+</head>
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  select{
+    width: 100px;
+  }
+</style>
+
+<body>
+<!-- Form bat buoc phai co 'name' de gui du lieu qa JS hay server va id de tham chieu/ tim no-->
+<form name="form" id="myForm">
+<table>
+  <tr>
+    <th style="width: 200px">Amount</th>
+    <th style="width: 150px">From Currency</th>
+    <th style="width: 150px">To Currency</th>
+    <th></th>
+  </tr>
+  <tr>
+<!--    input cung tuong tu form-->
+    <th> <input id="inputNumber" name="input" type="number"/></th>
+    <th>
+      <select id="selectFrom" name="selectForm">
+<!--        option thi chi can 'value', no need for id-->
+        <option>USD</option>
+        <option>VND</option>
+      </select>
+    </th>
+    <th>
+      <select id="selectTo">
+        <option>VND</option>
+        <option>USD</option>
+      </select>
+    </th>
+    <th>
+      <input id="submit" type="submit">
+    </th>
+
+  </tr>
+</table>
+</form>
+<p id="result" onclick="result()">Result:</p>
+<script src="currency_exchange.js"></script>
+</body>
+</html>

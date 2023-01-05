@@ -5,3 +5,11 @@ img{
 p{
     width: 600px;
 }
+select {
+    /*appearance: none;       !* Remove default arrow *!*/
+    color: #2ecc71;
+}
+.para{
+    display: flex;
+    float: left;
+}

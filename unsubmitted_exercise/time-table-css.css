@@ -1,0 +1,32 @@
+
+table, th, td{
+    clear: right;
+    border-collapse: collapse;
+    border: 1px solid black ;
+    padding: 10px;
+}
+.week{
+    background-color: yellow;
+}
+div, table{
+    width: 700px;
+}
+p{
+    text-align: center;
+    color: dodgerblue;
+    font-weight: bold;
+    font-size: 28px;
+}
+#divLeft{
+    padding: 10px;
+    float: left;
+    width: 30%;
+    color: dodgerblue;
+}
+#divRight{
+    padding: 10px;
+    float:right;
+    width: 40%;
+    color: dodgerblue;
+    text-align: right;
+}
