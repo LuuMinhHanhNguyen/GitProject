@@ -13,10 +13,20 @@
   select{
     width: 100px;
   }
+  button{
+      padding: 5px;
+      background-color: dodgerblue;
+      color: white;
+      border: 1px solid blue;
+  }
+  p, span{
+    font-size: 20px;
+    color: dodgerblue;
+    font-weight: bold;
+  }
 </style>
 
 <body>
-<!-- Form bat buoc phai co 'name' de gui du lieu qa JS hay server va id de tham chieu/ tim no-->
 <form name="form" id="myForm">
 <table>
   <tr>
@@ -26,11 +36,9 @@
     <th></th>
   </tr>
   <tr>
-<!--    input cung tuong tu form-->
     <th> <input id="inputNumber" name="input" type="number"/></th>
     <th>
-      <select id="selectFrom" name="selectForm">
-<!--        option thi chi can 'value', no need for id-->
+      <select id="selectFrom">
         <option>USD</option>
         <option>VND</option>
       </select>
@@ -42,13 +50,14 @@
       </select>
     </th>
     <th>
-      <input id="submit" type="submit">
+        <button type="button" onclick="result1()">CONVERT</button>
     </th>
-
   </tr>
 </table>
 </form>
-<p id="result" onclick="result()">Result:</p>
+<p>Result: <span id="result"></span></p>
+
 <script src="currency_exchange.js"></script>
+
 </body>
 </html>
