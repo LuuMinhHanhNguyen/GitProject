@@ -2,7 +2,6 @@ let inputNumber = document.getElementById('inputNumber');
 let selectFrom = document.getElementById("selectFrom")
 let selectTo = document.getElementById("selectTo")
 let outputNumber = document.getElementById("result")
-let button = document.getElementById("button");
 function displayResult() {
 
     let cal;
