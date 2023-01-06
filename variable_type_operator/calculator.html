@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<style>
+
+   #display{
+    font-size: 32px;
+    border: 0px solid;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  table{
+    width: 300px;
+    height: 400px;
+  }
+  table, td, th{
+    border-collapse: collapse;
+    border: 10px solid mediumseagreen;
+  }
+
+  button{
+    border: none;
+    font-size: 22px;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+<body>
+<table>
+  <tr>
+    <td colspan="4"><input type="text" id="display"></td>
+  </tr>
+  <tr>
+    <th><button class="number" id="7">7</button></th>
+    <th><button class="number" id="8">8</button></th>
+    <th><button class="number" id="9">9</button></th>
+    <th><button class="operator" id="/">÷</button></th>
+  </tr>
+  <tr>
+    <th><button class="number" id="4">4</button></th>
+    <th><button class="number" id="5">5</button></th>
+    <th><button class="number" id="6">6</button></th>
+    <th><button class="operator" id="*">x</button></th>
+  </tr>
+  <tr>
+    <th><button class="number" id="1">1</button></th>
+    <th><button class="number" id="2">2</button></th>
+    <th><button class="number" id="3">3</button></th>
+    <th><button class="operator" id="-">–</button></th>
+  </tr>
+  <tr>
+    <th><button  class="clear" id="clear">C</button></th>
+    <th><button class="number" id="0">0</button></th>
+    <th><button style="background-color: darkorange" class="equal" id="equal">=</button></th>
+    <th><button class="operator" id="+">+</button></th>
+  </tr>
+
+
+</table>
+
+<script src="calculator.js"></script>
+</body>
+</html>
