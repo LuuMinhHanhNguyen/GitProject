@@ -23,7 +23,7 @@ function displayResult() {
            outputNumber.innerText = `${cal} USD`
        }
    } else {
-       outputNumber.innerHTML = "Please enter your currency amount!"
+       outputNumber.innerText = "Please enter your currency amount!"
    }
 
 
