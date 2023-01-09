@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commission</title>
+</head>
+<body>
+<script>
+  let revenue = +prompt("Please enter your revenue here:","");
+  let commission;
+  if(revenue >= 1000000000) commission = (revenue * 12) / 100;
+  else if (revenue >= 500000000) commission = (revenue * 11)/ 100;
+  else commission = (revenue * 10)/ 100;
+  alert("Your commission for the revenue of" +" "+ revenue + " "+ "is " + commission);
+
+</script>
+</body>
+</html>
