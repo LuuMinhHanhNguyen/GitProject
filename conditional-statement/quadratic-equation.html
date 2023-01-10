@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic Equation</title>
+</head>
+<body>
+<script>
+        let a = +prompt("Nhap a");
+        let b = +prompt("Nhap b");
+        let c = +prompt("Nhap c");
+        let delta = (b*b) - (4*a*c);
+        let x1 = ( -b + Math.sqrt(delta) ) / (2*a);
+        let x2 = ( -b - Math.sqrt(delta) ) / (2*a);
+        let x = -b / (2*a);
+        if(delta > 0) {
+            alert("Phuong trinh co 2 nghiem:" + x1 + " ," + x2);
+        } else if(delta === 0){
+            alert("Phuong trinh co 1 nghiem kep:" + x);
+        } else alert("Phuong trinh vo nghiem!");
+</script>
+</body>
+</html>

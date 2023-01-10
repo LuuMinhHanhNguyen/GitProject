@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Interest</title>
+</head>
+<body>
+<script>
+  let money = +prompt("Nhap so tien ban muon gui:","");
+  let month = +prompt("Chon ky han mong muon (theo thang):","");
+  if(month > 0){
+    if(month  <= 6) alert("Lai suat thuc nhan hang thang la: " + ((money / 100) * 0.6));
+    else if( month <= 12) alert("Lai suat thuc nhan hang thang la: " + ((money / 100) * 0.8));
+    else if(month > 12 && month <= 24) alert("Lai suat thuc nhan hang thang la: " + ((money / 100) * 1.1));
+    else if(month > 24 && month <= 36) alert("Lai suat thuc nhan hang thang la: " + ((money / 100) * 1.4));
+    else alert("Lai suat thuc nhan la: " + ((money / 100) * 1.9));
+  }
+
+</script>
+</body>
+</html>
