@@ -13,12 +13,13 @@ console.log(allPics)
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-allPics.forEach((pic)=>{
+
+allPics.forEach((pic) => {
     pic.onclick = () => {
         pic.src = images[getRandomInt(3)];
-        if(firstPic.src === secondPic.src &&  firstPic.src === thirdPic.src){
+        if (firstPic.src === secondPic.src && firstPic.src === thirdPic.src) {
             result.innerText = "Bingo!"
-        } else{
+        } else {
             result.innerText = "Find 3 identical pictures"
         }
     }

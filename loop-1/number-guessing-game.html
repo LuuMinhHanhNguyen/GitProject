@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+<button id="start" onclick="startGame()">Start Game</button>
+<script>
+    function startGame() {
+        let count = 3;
+        let randomNum = Math.floor((Math.random() * 10)) + 1;
+        console.log(randomNum);
+        let userNum = +prompt("Enter a number from 1 to 10: (You have 3 times to guess)");
+
+        for (count; randomNum !== userNum && count >= 2;) {
+            count--;
+            userNum = +prompt("It's not the correct number! Try again!" + " You have" + " " + count + " " + "time(s) left.");
+
+        }
+        if (userNum === randomNum) alert("Congrats! You chose the correct number!" + "  " + ">>" + randomNum + "<<");
+        else alert("You lost!!!!!!! The number should be" + " " + randomNum + " !");
+
+    }
+</script>
+</body>
+</html>

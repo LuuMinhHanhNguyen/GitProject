@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-  let soDien = +prompt("Nhap vao so dien (kWh):", "");
-  if(soDien > 300) alert("Gia dien la: " + (soDien * 3));
-  else if(soDien > 200 && soDien <= 300) alert("Gia dien la: " + (soDien * 2.536 * 1000) + " VND");
-  else if(soDien > 100 && soDien <= 200) alert("Gia dien la: " + (soDien * 2.014 * 1000) + " VND");
-  else if(soDien > 50 && soDien <= 100) alert("Gia dien la: " + (soDien * 1.734 * 1000) + " VND");
-  else if( soDien >=0 && soDien < 50) alert("Gia dien la: " + (soDien * 1.678 * 1000) + " VND");
-  else alert("You have no electricity bill!");
+    let soDien = +prompt("Nhap vao so dien (kWh):", "");
+    if (soDien > 300) alert("Gia dien la: " + (soDien * 3));
+    else if (soDien > 200 && soDien <= 300) alert("Gia dien la: " + (soDien * 2.536 * 1000) + " VND");
+    else if (soDien > 100 && soDien <= 200) alert("Gia dien la: " + (soDien * 2.014 * 1000) + " VND");
+    else if (soDien > 50 && soDien <= 100) alert("Gia dien la: " + (soDien * 1.734 * 1000) + " VND");
+    else if (soDien >= 0 && soDien < 50) alert("Gia dien la: " + (soDien * 1.678 * 1000) + " VND");
+    else alert("You have no electricity bill!");
 
 
 </script>
