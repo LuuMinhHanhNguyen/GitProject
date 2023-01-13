@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<input id="word" type="text">
+<button onclick="search()">Search</button>
+<p>Nghĩa: <span id="result"></span></p>
+<script>
+    let engList = ["dog", "cat", "elephant", "penguin", "eagle"];
+    let vietList = ["chó", "mèo", "voi", "chim cánh cụt", "đại bàng"];
+    const output = document.getElementById("result");
+    const input = document.getElementById("word");
+
+    function search() {
+        if (engList.includes(input.value)) {
+            let index = engList.indexOf(input.value);
+            output.innerText = vietList[index];
+        } else output.innerText = "There's no result for your input word!"
+
+    }
+
+</script>
+</body>
+</html>

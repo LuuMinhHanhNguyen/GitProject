@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    let input;
+    for (let i = 0; i < arr.length; i++) {
+        input = +prompt("Enter 10 whole numbers:");
+        arr[i] = input;
+    }
+    let check = +prompt("Enter a whole number to check whether it's in the array:");
+    if (arr.includes(check)) alert(check + "is in the array");
+    else alert(check + " is not in the array");
+</script>
+</body>
+</html>

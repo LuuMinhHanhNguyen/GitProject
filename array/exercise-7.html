@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    let input;
+    for (let i = 0; i < arr.length; i++) {
+        input = +prompt("Enter 10 whole numbers:");
+        arr[i] = input;
+    }
+    let check = +prompt("Enter a whole number to delete from the array:");
+    if (arr.includes(check)) {
+        let index = arr.indexOf(check);
+        arr.splice(index, 1);
+        alert(check + " was deleted from the array!");
+        arr.push(0);
+    } else alert(check + " is not in the array");
+    document.write(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        input = +prompt("Enter 10 whole numbers:");
+        arr[i] = input;
+    }
+    document.write("Your array before sorting:" + arr + "<br>");
+    arr.sort(function (a, b) {
+        return b - a;
+    });
+    document.write("Your array after sorting:" + arr);
+</script>
+</body>
+</html>
