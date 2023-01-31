@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 9</title>
+</head>
+<body>
+
+<script>
+    const a = new Array(10);
+    const b = new Array(10);
+    let c = [];
+
+    for (let i = 0; i < a.length; i++) {
+        let input1 = +prompt("Enter a number for the first array:");
+        a[i] = input1;
+    }
+    for (let j = 0; j < b.length; j++) {
+        let input2 = +prompt("Enter a number for the second array:");
+        b[j] = input2;
+    }
+    c = c.concat(a, b);
+    document.write(c)
+</script>
+
+</body>
+</html>

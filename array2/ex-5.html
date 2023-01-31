@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 5</title>
+</head>
+<body>
+<script>
+    let arr1 = new Array(3);
+    let arr2 = new Array(3);
+    let input;
+    let isEqual = true;
+    for (let i = 0; i < arr1.length; i++) {
+        input = prompt("Enter value for arr1:");
+        arr1[i] = input;
+    }
+    for (let j = 0; j < arr2.length; j++) {
+        input = prompt("Enter value for arr2");
+        arr2[j] = input;
+    }
+
+    for (let h = 0; h < arr1.length; h++) {
+        if (arr1[h] !== arr2[h]) isEqual = false;
+    }
+
+    document.write(isEqual ? "arr1 and arr2 are the same" : "arr1 and arr2 are different");
+
+
+</script>
+</body>
+</html>
