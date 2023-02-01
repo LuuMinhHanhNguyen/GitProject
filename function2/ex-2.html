@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<p>Enter the radius to get the area or perimeter of a circle:</p>
+<input type="number" id="num">
+<button onclick="areaOfACircle(input)">Area</button>
+<button onclick="perimeterOfACircle(input)">Perimeter</button>
+<script>
+    let input = document.getElementById("num");
+    const pi = 3.14;
+
+    function areaOfACircle(radius) {
+        let area = pi * (radius.value * radius.value);
+        return alert("Area of the circle is: " + area);
+    }
+
+    function perimeterOfACircle(radius) {
+        let perimeter = (radius.value * 2) * pi;
+        return alert("Perimeter of the circle is: " + perimeter);
+    }
+</script>
+</body>
+</html>

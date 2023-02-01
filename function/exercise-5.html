@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body onload="starSearching(input)">
+
+<script>
+  let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  let input = prompt("Nhap vao ngoi sao bat ky de tim chom sao tuong ung:");
+  function starSearching(star){
+      if(arr1.includes(star)) return alert(arr2[arr1.indexOf(star)]);
+      else return alert("There is no star matching your searching!");
+  }
+</script>
+</body>
+</html>
