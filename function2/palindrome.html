@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+</head>
+<body>
+<script>
+    let input = prompt("Input a string to check whether it's palindrome:");
+    let count1 = [];
+    let count2 = [];
+    let first = 0;
+    let last = input.length - 1;
+    if (input.length % 2 === 0) {
+        for (let i = 0; i < input.length / 2; i++) {
+            if (input[first] === input[last]) {
+                count1[i] = input[first];
+                count2[i] = input[last];
+                first++;
+                last--;
+            } else {
+                count1.length += 1;
+                break;
+            }
+        }
+
+        if (count1.length === count2.length) alert(input + " is palindrome");
+        else alert(input + " is NOT palindrome")
+
+    } else alert(input + " is NOT palindrome");
+
+
+</script>
+</body>
+</html>

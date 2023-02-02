@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 9</title>
+</head>
+<body onload="alert(charCheck(char, string))">
+<script>
+    let char = prompt("Enter a character:");
+    let string = prompt("Enter a series of characters:");
+    let count = 0;
+
+    function charCheck(char, series) {
+        for (let i = 0; i < series.length; i++) {
+            if (char === series[i]) {
+                count += 1;
+            }
+        }
+        if (count === 0) return -1;
+        else return count;
+    }
+</script>
+</body>
+</html>

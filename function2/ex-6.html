@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6</title>
+</head>
+<body onload="alert(positiveInteger(input))">
+<script>
+    let input = +prompt("Enter a number to check whether it's a positive integer:");
+
+    function positiveInteger(num) {
+        if (num > 0 && num % 1 === 0) return true;
+        else return false;
+    }
+</script>
+</body>
+</html>

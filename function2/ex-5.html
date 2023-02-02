@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body onload="alert(findMin())">
+<script>
+    function findMin() {
+        let num1 = +prompt("Enter first number:");
+        let num2 = +prompt("Enter second number:");
+        let num3 = +prompt("Enter third number:");
+        if (num1 < num2 && num1 < num3) {
+            return num1;
+        } else {
+            if (num2 < num3) return num2;
+            else return num3;
+        }
+
+    }
+</script>
+</body>
+</html>

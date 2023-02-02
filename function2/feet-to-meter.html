@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet To Meter</title>
+</head>
+<body>
+<p>Enter a number(feet/meter) to convert it into (meter/feet):</p>
+<input type="number" id="num">
+<button onclick="feetToMeter(input)">Feet To Meter</button>
+<button onclick="meterToFeet(input)">Meter To Feet</button>
+<script>
+  let input = document.getElementById("num");
+
+  function feetToMeter(feet) {
+    let meter = feet.value * 0.305;
+    return alert( feet.value + " feet is: " + meter + " meter");
+  }
+
+  function meterToFeet(meter) {
+    let feet = meter.value * 3.279;
+    return alert( meter.value + " meter is: " + feet + " feet");
+  }
+</script>
+</body>
+</html>

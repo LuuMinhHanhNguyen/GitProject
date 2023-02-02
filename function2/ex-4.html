@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+</head>
+<body onload="alert(numOrCharCheck(input))">
+<script>
+    let input = prompt("Enter a character to check whether it's a number:");
+
+    function numOrCharCheck(character) {
+        if (!isNaN(character)) return true;
+        else return false;
+    }
+</script>
+</body>
+</html>

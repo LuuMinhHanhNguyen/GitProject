@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body onload="factorial(input)">
+<script>
+    let input = +prompt("Enter a number to get its factorial:");
+
+    function factorial(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
