@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            if (celsius < -273) alert("Min temperature should be -273 degree Celsius!");
+            else this.celsius = celsius;
+        }
+
+        celsiusToFahrenheit() {
+            return (this.celsius * 1.8) + 32;
+        }
+
+        celsiusToKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+
+    let tem1 = new Temperature(25);
+    document.write("Kelvin Degree is: " + tem1.celsiusToKelvin() + "<br>");
+    document.write("Fahrenheit Degree is: " + tem1.celsiusToFahrenheit());
+</script>
+</body>
+</html>
