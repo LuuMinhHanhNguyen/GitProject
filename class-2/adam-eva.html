@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam and Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this._weight = 10;
+        }
+
+        decrease() {
+            this._weight -= 1;
+        }
+
+        isEmpty() {
+            return this._weight === 0;
+        }
+
+        getWeight() {
+            return this._weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            return this.gender;
+        }
+
+        setGender(gender) {
+            return this.gender === gender;
+        }
+
+        checkApple(apple) {
+            return apple.getWeight() > 0;
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight += 1;
+            } else document.write("There is no apple left to eat!");
+        }
+
+        say(message) {
+            document.write(message);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        setAge(age) {
+            this.age = age;
+        }
+
+    }
+
+    let apple = new Apple();
+    let adam = new Human("Adam", true, 70);
+    let eva = new Human("Eva", false, 50);
+    adam.eat(apple);
+    document.write("Adam is male:" + adam.isMale() + "<br>");
+
+    document.write(adam.weight + "<br>");
+    document.write(adam.checkApple(apple) + "<br>");
+    eva.eat(apple);
+    document.write("Eva is male:" + eva.isMale() + "<br>")
+
+    document.write(eva.weight + "<br>");
+    document.write(eva.checkApple(apple) + "<br>");
+
+
+</script>
+</body>
+</html>
