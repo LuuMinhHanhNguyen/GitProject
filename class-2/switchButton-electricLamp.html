@@ -12,11 +12,11 @@
         }
 
         turnOff() {
-            return this.status;
+             this.status = false;
         }
 
         turnOn() {
-            return !this.status;
+            this.status = true;
         }
     }
 
@@ -31,11 +31,11 @@
         }
 
         switchOff() {
-            this.lamp.status = false;
+            this.lamp.turnOff();
         }
 
         switchOn() {
-            this.lamp.status = true;
+            this.lamp.turnOn();
         }
     }
 
