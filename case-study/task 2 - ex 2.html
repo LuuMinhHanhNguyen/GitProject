@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 Exercise 2</title>
+</head>
+<body>
+<script>
+    let height = +prompt("Enter a int to define the number of rows:");
+
+    for (let i = 1; i <= height; i++) {
+        for (let j = height - 1; j >= i; j--) {
+            document.write("&nbsp;&nbsp");
+        }
+        for (let k = 1; k <= i * 2 - 1; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
