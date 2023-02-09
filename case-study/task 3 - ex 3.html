@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 Exercise 3</title>
+</head>
+<body>
+<script>
+  let numerators = [5, 2, 5];
+  let denominators = [6, 3, 4];
+  let temp = [];
+  for(let i = 0; i < denominators.length; i++){
+    temp[i] = numerators[i] / denominators[i];
+  }
+  let max = Math.max(...temp);
+  let index = temp.indexOf(max);
+  document.write(index);
+
+</script>
+</body>
+</html>
