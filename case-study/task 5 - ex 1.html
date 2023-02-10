@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5 Exercise 1</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Enter a number to define the length of your 2D arr:");
+    let arr2D = new Array(m);
+
+    for (let i = 0; i < m; i++) {
+        let n = +prompt("Enter a number to define the length of insideArr: " + (i+1));
+        let insideArr = new Array(n);
+        let input;
+        for (let j = 0; j < n; j++) {
+            input = +prompt("Input elements for insideArr: " + (i + 1));
+            insideArr[j] = input;
+        }
+        arr2D[i] = insideArr;
+        insideArr = [];
+    }
+
+    document.write(arr2D);
+    console.log(arr2D);
+    document.write("<br>")
+
+    // sum of even numbers
+    let sum = 0;
+    for(let i = 0; i < arr2D.length; i++){
+        for (let j = 0; j < arr2D[i].length; j++){
+            if(arr2D[i][j] % 2 === 0) sum += arr2D[i][j];
+        }
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

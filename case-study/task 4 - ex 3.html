@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 Exercise 3</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let s3 = "hanh";
+    let s4 = "han";
+    let s5 = "ssccbba";
+    let s6 = "ssccddba";
+    let s7 = "hannah";
+    let s8 = "hana";
+
+    // convert string to arr
+    function toArr(string) {
+        let arr = [];
+        for (let i = 0; i < string.length; i++) {
+            arr[i] = string[i];
+        }
+        return arr;
+    }
+
+    function commonCharacterCount(s1, s2) {
+        let arr1 = toArr(s1);
+        let arr2 = toArr(s2);
+        let identicalElements = []
+        let differentElements = [];
+        let count = 0;
+        let occurrence = [];
+        document.write("Array 1: " + arr1 + "<br>");
+        document.write("Array 2: " + arr2 + "<br>");
+
+        // find out identical elements
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    identicalElements.push(arr1[i]);
+                    arr1.splice(i, 1);
+                    arr2.splice(j, 1);
+                    i--;  // decrease by 1, so it will go back to the previous index after each loop
+                    j--;  // decrease by 1, so it will go back to the previous index after each loop
+                }
+            }
+        }
+
+        document.write("Identical elements: " + identicalElements);
+        document.write("<br>");
+
+        // create an array with different elements
+
+        for (let i = 0; i < identicalElements.length; i++) {
+            if (!differentElements.includes(identicalElements[i])) differentElements.push(identicalElements[i]);
+        }
+
+
+        // compare differentElements to identicalElements and count the number of occurrences
+
+        for (let i = 0; i < differentElements.length; i++) {
+            for (let j = 0; j < identicalElements.length; j++) {
+                if (differentElements[i] === identicalElements[j]) {
+                    count += 1
+                }
+            }
+            occurrence.push(count);
+            count = 0;
+        }
+
+        document.write("The 2 strings have " + differentElements.length + " identical elements: " + differentElements +
+            " with their occurrences " + occurrence + " respectively.")
+
+    }
+
+    commonCharacterCount(s7, s8);
+
+
+</script>
+</body>
+</html>

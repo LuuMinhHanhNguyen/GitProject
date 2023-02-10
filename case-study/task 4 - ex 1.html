@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 Exercise 1</title>
+</head>
+<body>
+<script>
+    let input = "                   tRuong                   TaN                     HAI           ";
+    document.write("Input: " + input);
+    document.write("<br>");
+
+    function formatString(string) {
+        let newString = string.toLowerCase().trim();
+        let arr = [];
+        let result = "";
+
+
+        for (let i = 0; i < newString.length; i++) {
+            arr[i] = newString[i];
+        }
+        document.write(arr);
+        document.write("<br>");
+        // delete whitespace
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === " " && arr[i + 1] === " ") {
+                arr.splice(i, 1);
+                i--
+            }
+        }
+        // toUpperCase
+        for (let i = 0; i < arr.length; i++) {
+            arr[0] = arr[0].toUpperCase();
+            if (arr[i] === " ") arr[i + 1] = arr[i + 1].toUpperCase();
+        }
+        // back to String
+        for (let i = 0; i < arr.length; i++) {
+            result += arr[i]
+        }
+
+        document.write("Output: " + result)
+        document.write("<br>")
+    }
+
+    formatString(input);
+
+    function findLongestWord(string) {
+        let arr = string.split(" ");
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > max.length) max = arr[i];
+        }
+        document.write("The longest word is: " + max);
+    }
+
+    document.write("<br>")
+    findLongestWord("How are you today ")
+
+
+</script>
+</body>
+</html>

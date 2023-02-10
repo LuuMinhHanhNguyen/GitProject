@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5 Exercise 2</title>
+</head>
+<body>
+<script>
+    function isPrimeNumber(num) {
+        if (num <= 1) return false;
+        if (num === 2) return true;
+
+        for (let i = 2; i < num; i++) {
+            return num % i !== 0;
+        }
+    }
+
+    let array1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+    function listAndCountPrimeNum(arr) {
+        let count = 0;
+        let miniArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (isPrimeNumber(arr[i][j])) {
+                    count++;
+                    miniArr.push(arr[i][j]);
+                }
+            }
+            document.write(`Array ${(i + 1)} has ${count} prime numbers. (${miniArr})`);
+            document.write("<br>");
+            count = 0;
+            miniArr = [];
+        }
+    }
+
+    listAndCountPrimeNum(array1);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 Exercise 2</title>
+</head>
+<body>
+<script>
+    let s = "cabcahajadsjfksdhfe";
+
+    function differentSymbolsNaive(string) {
+        let arr = [];
+        for (let i = 0; i < string.length; i++) {
+            if (!arr.includes(string[i])) arr.push(string[i]);
+        }
+        return "There are/is " + arr.length + " different character(s): " + arr;
+    }
+
+    document.write(differentSymbolsNaive(s));
+</script>
+</body>
+</html>
