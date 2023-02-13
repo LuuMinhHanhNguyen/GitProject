@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6</title>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    th, td {
+        width: 200px;
+        text-align: center;
+    }
+
+    #blockDiv {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 22px;
+        width: 350px;
+        z-index: 999;
+
+    }
+</style>
+<body>
+<div id="buttons">
+    <button id="btn-add" onclick="addStudent()">Add New Student</button>
+    <button id="btn-edit" onclick="editStudent()">Edit Student</button>
+    <button id="btn-delete" onclick="deleteStudent()">Delete Student</button>
+</div>
+<div style="margin-top: 10px" id="input">
+    <input placeholder="HV-xxxx" id="input-id">
+    <input placeholder="Hannah Luu" maxlength="50" id="input-name">
+    <input placeholder="C1222G1" id="input-group">
+    <input placeholder="hannah@gmail.com" id="input-email">
+    <input placeholder="dd/mm/yyyy" id="input-dob">
+</div>
+<div id="saveDiv">
+
+</div>
+<table style="margin-top: 30px" id="table">
+    <tr style="background-color: lightskyblue">
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Class</th>
+        <th>Email</th>
+        <th>DOB</th>
+    </tr>
+    <tbody id="body"></tbody>
+
+</table>
+<script>
+    let body = document.getElementById("body");
+    let inputID = document.getElementById("input-id");
+    let inputName = document.getElementById("input-name");
+    let inputEmail = document.getElementById("input-email");
+    let inputClass = document.getElementById("input-group");
+    let inputDOB = document.getElementById("input-dob");
+    let saveDiv = document.getElementById("saveDiv");
+    let buttons = document.getElementById("buttons");
+
+
+    class Student {
+        constructor(id, name, group, email, dob) {
+            this.id = id;
+            this.name = name;
+            this.group = group;
+            this.email = email;
+            this.dob = dob;
+        }
+    }
+
+    let students = [];
+
+    function addStudent() {
+
+        if (students.find((student) => student.id === inputID.value)) alert("You cannot use this ID!");
+        else {
+
+            if (inputName.value === "" || inputID.value === "" || inputDOB.value === ""
+                || inputEmail.value === "" || inputClass.value === "") alert("Please input student information!");
+            else {
+                let newStudent = new Student(inputID.value, inputName.value, inputClass.value, inputEmail.value, inputDOB.value);
+                students.push(newStudent);
+                display();
+            }
+        }
+
+    }
+
+    function display() {
+        inputName.value = "";
+        inputID.value = "";
+        inputEmail.value = "";
+        inputClass.value = "";
+        inputDOB.value = "";
+        body.innerHTML = "";
+
+        for (let i = 0; i < students.length; i++) {
+            body.innerHTML += `
+        <tr>
+        <td>${students[i].id}</td>
+        <td>${students[i].name}</td>
+        <td>${students[i].group}</td>
+        <td>${students[i].email}</td>
+        <td>${students[i].dob}</td>
+    </tr>
+        `
+        }
+    }
+
+    let editedIndex;
+    let editedStudent;
+
+    function editStudent() {
+
+        let input = prompt("Enter your student ID:");
+        let index = students.findIndex((element) => element.id === input);
+        if (index === -1) alert("Please enter a valid student ID");
+        else {
+            editedIndex = index;
+            inputName.value = students[index].name;
+            inputID.value = students[index].id;
+            inputEmail.value = students[index].email;
+            inputClass.value = students[index].group;
+            inputDOB.value = students[index].dob;
+            saveDiv.innerHTML += `<button id="save" style="margin-top: 10px" onclick="onSave()">Save</button>`;
+            buttons.innerHTML = `<div id="blockDiv"></div>` + buttons.innerHTML;
+        }
+
+    }
+
+    function onSave() {
+        editedStudent = new Student(inputID.value, inputName.value, inputClass.value, inputEmail.value, inputDOB.value);
+        console.log(editedStudent);
+        students[editedIndex] = editedStudent;
+        buttons.removeChild(document.getElementById("blockDiv"));
+        saveDiv.removeChild(document.getElementById("save"));
+        display();
+
+    }
+
+    function deleteStudent() {
+        let input = prompt("To delete, please enter a student ID:");
+        let deletedIndex = students.findIndex((element) => element.id === input);
+        console.log(deletedIndex);
+        if (deletedIndex === -1) alert("Please enter a valid student ID");
+        else {
+            let cf = confirm("Do you want to delete this student?");
+            if (cf) {
+                students.splice(deletedIndex, 1);
+                display();
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

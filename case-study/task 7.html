@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div {
+        border: 1px lightblue solid;
+    }
+
+    #biggest {
+        display: block;
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 550px;
+        width: 1200px;
+    }
+
+    #url-bar {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        /*align-items: center;*/
+        /*vertical-align: middle;*/
+
+    }
+
+    #two-div {
+        display: flex;
+    }
+
+    select {
+        height: 30px;
+        width: 150px;
+        display: block;
+        margin: 15px;
+    }
+
+    .ex {
+        border: none;
+    }
+
+</style>
+<body>
+<div id="biggest">
+    <!--    first div-->
+    <div style="height: 120px; background-color: lightblue">
+        <h2 style="margin-bottom: 10px; text-align: center">A Web Page</h2>
+        <div id="url-bar">
+            <i class='fas fa-arrow-left' style='font-size:45px'></i>
+            <i class='fas fa-arrow-right' style='font-size:45px'></i>
+            <i class='fas fa-home' style='font-size:45px'></i>
+            <input type="text" placeholder="https://" style="height: 40px; width: 800px">
+            <i class='fas fa-search' style='font-size:45px'></i>
+        </div>
+    </div>
+
+    <!--    second div-->
+    <div style="height: 80px; display: flex">
+        <div style="float:left" class="ex"><h1 style="font-size: 70px; padding-left: 10px; width: 20%">G</h1></div>
+        <div class="ex" style="text-align: center; width: 80%"><h2>Hệ thống quản lý bài tập Case Study Module 1</h2>
+        </div>
+    </div>
+
+    <!--    third div-->
+
+    <div id="two-div" style="height: 310px">
+        <div id="div-left" style="width: 25%">
+            <select>
+                <option>Bai tap 1</option>
+            </select>
+            <select>
+                <option>Bai tap 2</option>
+            </select>
+            <select>
+                <option>Bai tap 3</option>
+            </select>
+            <select>
+                <option>Bai tap 4</option>
+            </select>
+
+        </div>
+        <div id="div-right" style="width: 75%"></div>
+    </div>
+
+    <div style="background-color: lightblue; height: 40px"></div>
+</div>
+
+</body>
+</html>
