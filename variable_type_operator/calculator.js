@@ -22,6 +22,10 @@ buttons.forEach((item) =>{
             display.value += item.id
         }
     }
+    for(var x = 2; x < 8; x++)
+    {
+        console.log(x);
+    }
 })
 
 
